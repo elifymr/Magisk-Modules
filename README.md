@@ -2,40 +2,60 @@
 Beysa Developer Magisk modules
 
 
-#HelloAntiCheats, PUBG Mobile (com.tencent.ig) için config dosyalarını gizleyen bir Magisk modülüdür. Sahte bir Content dizini bağlayarak dosya taramalarını yönlendirir. %0 bootloop riski ile çalışır, sistem veya kernel’e dokunmaz!
+# **AntiCheatSandbox**
+### **🟣 Tanım**  
+**AntiCheatSandbox**, PUBG Mobile anticheat cihaz taramalarını sandbox ortamına yönlendirir. Cihaz bilgileri (IMEI, marka, model) **rasgele ve eşsiz** olarak döndürülür. Oyun çalışır, **%0 bootloop riski**.
 
->Özellikler
-Sahte Content dizini bağlama.
-Gerçekçi dosya/dizin taklidi.
-%0 bootloop/soft brick riski.
-Sistem dışı modifikasyon.
+---
 
-Kurulum
-[Releases sayfasından FuckAnticheat.zip’i indir.]
-[Magisk Manager’da Dosyadan yükle ile yükle.]
-[Cihazı yeniden başlat.]
-[Magisk Hide ile com.tencent.ig’yi gizle.]
+### **🟢 Özellikler**  
+- Boş `/proc` ve `/sys` bağlama.  
+- Rasgele, eşsiz Build.prop ile cihaz bilgisi gizleme.  
+- **%0 bootloop riski**.  
+- Sistem dışı modifikasyon.
 
-#Gereksinimler
-#Magisk v27+
-#Root’lu cihaz
-#Test: Samsung Galaxy A24 (SM-A245F)'da test edildi sonuç başarılı döndü shamiko denylist aktif olursa daha güçlü sonuçlar alabilirsiniz.
+---
 
->Uyarı
-Sorumluluk bana ait değildir, anticheat yamaları güncelleme aldığı için dikkatli kullanılması gerekmektedir. ve her şeye rağmen TWRP yedeği alın<
+### **Kurulum**  
+1. [Releases](https://github.com/[SENİN_GITHUB_KULLANICI_ADIN]/AntiCheatSandbox/releases) sayfasından `AntiCheatSandbox.zip` indir.  
+2. **Magisk Manager**’da **Dosyadan yükle**.  
+3. Cihazı yeniden başlat.  
+4. **Magisk Hide** ile `com.tencent.ig`’yi gizle.
 
+---
 
-*Dosya Yapısı*
-#*system/storage/emulated/0/.../Content: Sahte dizin (dummy.txt dahil).
-post-fs-data.sh: Sahte dizini bağlar.
-service.sh: Bağlamayı doğrular.
-uninstall.sh: Güvenli kaldırma.*
+### **🟣 Gereksinimler**  
+- **Magisk v27+**  
+- Root’lu cihaz  
+- Test: **Samsung Galaxy A24 (SM-A245F)**
 
-Notlar
->Magisk Hide veya Shamiko ile root gizleyin.
-Sorun mu? TWRP’de /data/adb/modules/fuckanticheat’i sil.
-İletişim
+---
 
-#Sorular için: t.me/BeyzaStudios
-#Lisans
-#MIT Lisansı
+### **Uyarı**  
+Oyunların hizmet şartlarına uygun kullanın. **Ban riski** taşıyabilir. **Yalnızca test amaçlı.** **TWRP yedeği önerilir.**
+
+---
+
+### **Dosya Yapısı**  
+- `system/proc/empty`: Boş süreç dizini.  
+- `system/sys/empty`: Boş sistem dizini.  
+- `system/prop/local.prop`: Rasgele cihaz bilgileri.  
+- `post-fs-data.sh`: Sandbox bağlamaları.  
+- `service.sh`: Bağlama doğrulama.  
+- `uninstall.sh`: Güvenli kaldırma.
+
+---
+
+###Notlar**  
+- **Magisk Hide** veya **Shamiko** ile root gizleyin.  
+- Sorun mu? TWRP’de `/data/adb/modules/AntiCheatSandbox`’i sil.
+
+---
+
+### **İletişim**  
+Sorular için: **[t.me/BeyzaStudios](https://t.me/BeyzaStudios)**
+
+---
+
+### **Lisans**  
+[MIT Lisansı](LICENSE)
