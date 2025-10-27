@@ -17,7 +17,7 @@ Beysa Developer Magisk modules
 ---
 
 ### **Kurulum**  
-1. [Releases](https://github.com/[SENİN_GITHUB_KULLANICI_ADIN]/AntiCheatSandbox/releases) sayfasından `AntiCheatSandbox.zip` indir.  
+1. [Releases](https://github.com/elifymr/Magisk-Modules/tree/AntiCheat) sayfasından `AntiCheatSandbox.zip` indir.  
 2. **Magisk Manager**’da **Dosyadan yükle**.  
 3. Cihazı yeniden başlat.  
 4. **Magisk Hide** ile `com.tencent.ig`’yi gizle.
